@@ -1,0 +1,4 @@
+/* 纵向滚动 */
+.scroll-y {
+	overflow-y: auto;
+}
