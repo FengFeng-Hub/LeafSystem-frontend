@@ -171,7 +171,7 @@ export const data = [
             ],
             "sex": "1",
             "real_name": "",
-            "avatar": "/upload/_ls/_test/BiazfanxmamNRoxxVxka.png",
+            // "avatar": "/upload/_ls/_test/BiazfanxmamNRoxxVxka.png",
             "login_ip": "0:0:0:0:0:0:0:1",
             "user_id": "2",
             "phone": "",

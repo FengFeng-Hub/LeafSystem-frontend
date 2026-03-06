@@ -85,6 +85,7 @@ const createBackendRoutes = (menuTree) => {
 					// component: (resolve) => require([`/views/${item.component}`], resolve),
 					meta: {
 						key: item.menu_id,
+						activeKey: item.is_show === '1' ? item.menu_id : item.active_menu_id,
 						type: item.type,
 						url: item.url,
 						link: item.link,

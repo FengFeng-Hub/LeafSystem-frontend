@@ -183,10 +183,11 @@ onMounted(() => {})
 // 菜单变化
 watch(
 	() => route.meta.key,
-	async (newKey, a) => {
+	async (newKey) => {
 		// 如果不是后台页面直接返回
 		if (!route.meta.isBackend) return
-	    selectedKeys.value = [newKey]
+
+		selectedKeys.value = [route.meta.activeKey]
 
 		await nextTick()
 

@@ -38,27 +38,29 @@ export const getTree = async () => {
 						component: '/backend/_ls/systemManage/menu/index.vue',
 		                type: '2',
 		                is_show: '1',
-						// child_menu: [
-						// 	{
-						// 		menu_id: '12',
-						// 		menu_name: '菜单管理详情页',
-						// 		menu_icon: '',
-						// 		type: '2',
-						// 		is_show: '1',
-						// 		url: '/backend/ls/systemManage/menu/:id',
-						// 		component: '/backend/_ls/systemManage/menu/index.vue',
-						// 	}
-						// ]
+						child_menu: [
+							{
+								menu_id: '121',
+								menu_name: '菜单管理详情页',
+								menu_icon: '',
+								type: '2',
+								is_show: '0',
+								url: '/backend/ls/systemManage/menu/edit?id=123',
+								component: '/backend/_ls/systemManage/menu/edit.vue',
+								// TODO 新增属性：如果是菜单项且不显示，则需要配置激活菜单页
+								active_menu_id: '5',
+							}
+						]
 		            },
-					{
-						menu_id: '121',
-						menu_name: '菜单管理详情页',
-						menu_icon: '',
-						type: '2',
-						is_show: '0',
-						url: '/backend/ls/systemManage/menu/edit?id=123',
-						component: '/backend/_ls/systemManage/menu/edit.vue',
-					},
+					// {
+					// 	menu_id: '121',
+					// 	menu_name: '菜单管理详情页',
+					// 	menu_icon: '',
+					// 	type: '2',
+					// 	is_show: '0',
+					// 	url: '/backend/ls/systemManage/menu/edit?id=123',
+					// 	component: '/backend/_ls/systemManage/menu/edit.vue',
+					// },
 		            {
 		                menu_id: '6',
 		                menu_name: '系统配置管理',

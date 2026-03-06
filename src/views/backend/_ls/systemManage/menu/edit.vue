@@ -29,7 +29,11 @@
 	</a-form>
 </template>
 <script setup>
-import { reactive, toRaw } from "vue";
+import { onMounted, reactive, toRaw } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
 const formState = reactive({
 	name: "",
 	delivery: false,
@@ -37,6 +41,11 @@ const formState = reactive({
 	resource: "",
 	desc: "",
 })
+
+onMounted(() => {
+	formState.name = route.params.id
+})
+
 const onSubmit = () => {
 	console.log("submit!", toRaw(formState));
 }

@@ -108,6 +108,7 @@
 	<Edit
 		:id="currentId"
 		:type="editType"
+		enableDrag
 		v-model:open="editOpen"
 	/>
 </template>

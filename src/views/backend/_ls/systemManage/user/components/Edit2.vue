@@ -23,10 +23,6 @@
 		      	<a-input-password v-model:value="formData.password"/>
 		    </a-form-item>
 	  	</a-form>
-		<a-button @click="editOpen = true">打开弹窗</a-button>
-		<Edit2
-			v-model:open="editOpen"
-		/>
 		<template #footer>
 			<a-button type="primary">保存</a-button>
 			<a-button>返回</a-button>
@@ -37,8 +33,6 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { AntdModel } from '@/components/_ls/ls-components'
-
-import Edit2 from './Edit2.vue'
 
 const props = defineProps({
 	id: {
@@ -53,8 +47,6 @@ const props = defineProps({
 
 // 打开对话框
 const open = defineModel('open')
-
-const editOpen = ref(false)
 
 // 表单数据
 const formData = ref({})

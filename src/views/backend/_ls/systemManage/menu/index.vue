@@ -1,6 +1,8 @@
 <template>
 	菜单管理
-	<a-button @click="handleEdit">编辑</a-button>
+	<br>
+	1 <a-button @click="handleEdit(1)">编辑</a-button><br>
+	2 <a-button @click="handleEdit(2)">编辑</a-button>
 </template>
 
 <script setup>
@@ -8,11 +10,11 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const handleEdit = () => {
+const handleEdit = (id) => {
 	router.push({
 		path: '/backend/ls/systemManage/menu/edit',
 		query: {
-			id: 1
+			id: id
 		}
 	})
 }
